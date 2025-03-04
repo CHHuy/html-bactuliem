@@ -1,0 +1,114 @@
+.header-nav {
+  background: url(../uploads/bg-nav.png) center center repeat-x;
+  background-size: auto 100%;
+}
+.navbar {
+  height: 50px;
+  padding: 0;
+  background-image: unset;
+}
+
+.navbar-toggler {
+  font-size: 1.6rem;
+  height: fit-content;
+}
+.header-img {
+  width: 100%;
+}
+.form-search {
+  position: relative;
+  margin-right: 15px;
+}
+.input-search {
+  border-radius: 20px;
+  font-size: 1.6rem;
+  padding: 0.375rem 3.5rem 0.375rem 1.5rem;
+  width: 180px;
+}
+
+.button-search {
+  background-color: transparent;
+  border: 0;
+  color: #666;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 34px;
+  height: 100%;
+  padding: 0;
+}
+
+.nav-item {
+  &.active {
+    font-weight: bold;
+    background-image: url(../uploads/bg-nav-active.png);
+  }
+  &:hover {
+    background-image: url(../uploads/bg-nav-active.png);
+  }
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #fff;
+  font-weight: bold;
+}
+.nav-link {
+  padding: 15px 13px !important;
+  color: #fff;
+  height: 50px;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+}
+.dropdown-menu {
+  padding: 0;
+}
+.dropdown-item {
+  padding: 10px 15px 10px 30px;
+  color: #b4210b;
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: relative;
+  &::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 9px;
+    left: 10px;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-image: url(../uploads/bg-nav-active.png);
+  }
+}
+
+#navbarSupportedContent {
+  background: url(../uploads/bg-nav.png) center center repeat-x;
+  background-size: auto 100%;
+}
+
+@include media-breakpoint-up(xl) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+    min-width: 200px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container {
+    padding: 0;
+  }
+}
+@include media-breakpoint-down(xl) {
+  .toggler-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+    width: 100%;
+    height: 100%;
+  }
+}
