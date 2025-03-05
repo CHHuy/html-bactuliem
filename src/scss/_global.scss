@@ -32,7 +32,9 @@ input,
 a {
   text-decoration: none;
   transition: all 300ms ease;
+  color: #000;
   &:hover {
+    color: $red;
     img {
       opacity: 0.85;
     }

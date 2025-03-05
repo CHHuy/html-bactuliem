@@ -12,10 +12,10 @@ function swiperJS() {
       el: ".swiper-pagination",
     },
 
-    // autoplay: {
-    //   delay: 3500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
   });
 }
 

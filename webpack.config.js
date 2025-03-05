@@ -3,6 +3,7 @@
 const path = require("path");
 const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -32,6 +33,9 @@ module.exports = {
       filename: "category.html",
       template: "./src/category.html",
       chunks: ["categoryPage"],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/uploads", to: "./uploads" }],
     }),
   ],
   module: {
