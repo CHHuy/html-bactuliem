@@ -32,6 +32,15 @@ input,
 a {
   text-decoration: none;
   transition: all 300ms ease;
+  &:hover {
+    img {
+      opacity: 0.85;
+    }
+  }
+}
+
+img {
+  transition: all 300ms ease;
 }
 
 .translate-up {
