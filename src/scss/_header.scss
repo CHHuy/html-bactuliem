@@ -98,8 +98,10 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .container {
-    padding: 0;
+  header {
+    .container {
+      padding: 0;
+    }
   }
 }
 @include media-breakpoint-down(xl) {

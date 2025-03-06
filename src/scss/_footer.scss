@@ -3,3 +3,10 @@ footer {
     width: 100%;
   }
 }
+@include media-breakpoint-down(sm) {
+  footer {
+    .container {
+      padding: 0;
+    }
+  }
+}
