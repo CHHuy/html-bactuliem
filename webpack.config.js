@@ -9,7 +9,7 @@ module.exports = {
   mode: "development",
   entry: {
     homePage: ["./src/js/main.js", "./src/js/home/index.js"],
-    categoryPage: ["./src/js/main.js", "./src/js/category/index.js"],
+    postPage: ["./src/js/main.js", "./src/js/post/index.js"],
   },
   output: {
     filename: "js/[name].js",
@@ -23,16 +23,54 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Trang chủ",
       filename: "index.html",
       template: "./src/index.html",
       chunks: ["homePage"],
     }),
     new HtmlWebpackPlugin({
-      title: "Category",
-      filename: "category.html",
-      template: "./src/category.html",
-      chunks: ["categoryPage"],
+      filename: "post.html",
+      template: "./src/post.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/contact.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "news.html",
+      template: "./src/news.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "news_2.html",
+      template: "./src/news_2.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "news_detail.html",
+      template: "./src/news_detail.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "document.html",
+      template: "./src/document.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "diagram.html",
+      template: "./src/diagram.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "list.html",
+      template: "./src/list.html",
+      chunks: ["postPage"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "list_2.html",
+      template: "./src/list_2.html",
+      chunks: ["postPage"],
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/uploads", to: "./uploads" }],
@@ -83,7 +121,7 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: "asset",
         generator: {
-          filename: "fonts/[name][ext]",
+          filename: "third_party/fonts/[name][ext]",
         },
       },
       {

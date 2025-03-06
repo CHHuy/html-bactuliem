@@ -1,0 +1,119 @@
+.section-post {
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding: 1rem;
+}
+
+.nav-pagination {
+  margin: 2rem 0;
+  text-align: center;
+  .pagination {
+    justify-content: center;
+    .page-item.active {
+      a {
+        background-color: $red;
+        border-color: $red;
+      }
+    }
+    .page-link {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.section-document {
+  margin-bottom: 2rem;
+  .section-document-filter {
+    margin-bottom: 2rem;
+    select,
+    input {
+      font-size: 1.6rem;
+    }
+    .submit-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: end;
+    }
+    button {
+      font-size: 1.6rem;
+      width: 100%;
+      height: 35px;
+    }
+  }
+  .section-document-table {
+    table {
+      font-size: 1.4rem;
+      thead {
+        th {
+          white-space: nowrap;
+        }
+      }
+      .table-description {
+        display: block;
+        min-width: 260px;
+      }
+    }
+  }
+}
+
+.section-list {
+  padding: 1rem;
+  a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+.section-diagram {
+  ul {
+    position: relative;
+    list-style: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 1px;
+      height: calc(100% - 18px);
+      background-color: #ddd;
+    }
+    li {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 15px;
+        height: 1px;
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+.section-home-content
+  .section-main-wrapper
+  .section-news
+  .section-news-wrapper
+  .main-content-card
+  .card
+  .card-body.card-text-only {
+  padding: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .section-home-content
+    .section-main-wrapper
+    .section-news
+    .section-news-wrapper
+    .main-content-card
+    .card
+    .card-body.card-with-img {
+    padding: 1rem;
+  }
+}

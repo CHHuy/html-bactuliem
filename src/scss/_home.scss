@@ -229,6 +229,26 @@ $red: #d70a0a;
           }
         }
       }
+
+      &.news-page {
+        .card {
+          .card-title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+          .card-text {
+            font-size: 1.4rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+          }
+        }
+      }
     }
     .section-nav {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -259,6 +279,7 @@ $red: #d70a0a;
   }
 
   .aside-content-wrapper {
+    margin-bottom: 2rem;
     .content-list {
       margin-bottom: 2rem;
     }
