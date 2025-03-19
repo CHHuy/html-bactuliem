@@ -1,9 +1,7 @@
-$red: #d70a0a;
-
 .section-text-marquee {
   margin-bottom: 2rem;
   .marquee-wrapper {
-    background-color: #d70a0a;
+    background-color: $blue;
     font-weight: bold;
     margin-top: 20px;
   }
@@ -13,9 +11,8 @@ $red: #d70a0a;
     color: white;
     white-space: nowrap;
     border-right: 1px solid white;
-    background: url("../uploads/bg-notify.png") left center no-repeat;
     background-size: auto 100%;
-    padding: 10px 20px 10px 35px;
+    padding: 10px 20px 10px 20px;
   }
 
   .marquee-wrapper .text-run {
@@ -35,7 +32,7 @@ $red: #d70a0a;
   @media screen and (max-width: 767px) {
     .marquee-wrapper .text {
       padding: 10px;
-      background: #d70a0a none;
+      background: $blue none;
     }
   }
 
@@ -128,8 +125,9 @@ $red: #d70a0a;
   // common style
   .content-title {
     color: white;
-    background: url(../uploads/bg-title.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-color: $bold-blue;
+    // background: url(../uploads/bg-title.png) center center no-repeat;
+    // background-size: 100% 100%;
     font-size: 1.5rem;
     text-transform: uppercase;
     margin: 0;
@@ -146,7 +144,7 @@ $red: #d70a0a;
       padding-bottom: 1rem;
     }
     li::marker {
-      color: $red;
+      color: $blue;
     }
   }
 
@@ -258,10 +256,15 @@ $red: #d70a0a;
       ul.nav {
         background-color: #00aeff;
       }
+      .nav-link:hover {
+        color: $yellow;
+      }
       .nav-link.active {
         border-radius: unset;
-        background: url(../uploads/bg-title.png) left center no-repeat;
-        background-size: 100% 100%;
+        background-color: transparent;
+        color: $yellow;
+        // background: url(../uploads/bg-title.png) left center no-repeat;
+        // background-size: 100% 100%;
       }
       .tab-content {
         ul {
@@ -305,7 +308,7 @@ $red: #d70a0a;
             position: absolute;
             top: 5px;
             left: -15px;
-            color: $red;
+            color: $blue;
           }
           a {
             font-size: 1.4rem;
@@ -345,13 +348,13 @@ $red: #d70a0a;
       }
 
       .visitor-tracking-wraper .tracking-label {
-        color: #b4210b;
+        color: $blue;
         font-weight: normal;
         white-space: nowrap;
       }
 
       .visitor-tracking-wraper .tracking-value {
-        color: #b4210b !important;
+        color: $bold-blue !important;
       }
     }
   }

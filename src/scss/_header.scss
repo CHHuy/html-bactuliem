@@ -1,6 +1,8 @@
 .header-nav {
-  background: url(../uploads/bg-nav.png) center center repeat-x;
-  background-size: auto 100%;
+  // background: url(../uploads/bg-nav.png) center center repeat-x;
+  // background-size: auto 100%;
+  background-color: $blue;
+  border-bottom: 4px solid #0854b5;
 }
 .navbar {
   padding: 0;
@@ -40,10 +42,16 @@
 .nav-item {
   &.active {
     font-weight: bold;
-    background-image: url(../uploads/bg-nav-active.png);
+    // background-image: url(../uploads/bg-nav-active.png);
+    a.nav-link {
+      color: $yellow;
+    }
   }
   &:hover {
-    background-image: url(../uploads/bg-nav-active.png);
+    a.nav-link {
+      color: $yellow;
+    }
+    // background-image: url(../uploads/bg-nav-active.png);
   }
 }
 .navbar-nav .nav-link.active,
@@ -64,7 +72,6 @@
 }
 .dropdown-item {
   padding: 10px 15px 10px 30px;
-  color: #b4210b;
   font-size: 1.6rem;
   font-weight: 500;
   position: relative;
@@ -77,14 +84,15 @@
   }
   &:hover,
   &:focus {
-    color: #fff;
-    background-image: url(../uploads/bg-nav-active.png);
+    color: $blue;
+    // background-image: url(../uploads/bg-nav-active.png);
+    background-color: transparent;
   }
 }
 
 #navbarSupportedContent {
-  background: url(../uploads/bg-nav.png) center center repeat-x;
-  background-size: auto 100%;
+  // background: url(../uploads/bg-nav.png) center center repeat-x;
+  // background-size: auto 100%;
 }
 
 @include media-breakpoint-up(xl) {
